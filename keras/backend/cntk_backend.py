@@ -1831,6 +1831,10 @@ def sparse_categorical_crossentropy(target, output, from_logits=False, axis=-1):
     return categorical_crossentropy(target, output, from_logits, axis=axis)
 
 
+def nce_loss(kernel, bias, target, inputs, num_sampled, num_classes):
+    raise NotImplementedError
+
+
 class Function(object):
 
     def __init__(self, inputs, outputs, updates=[], **kwargs):

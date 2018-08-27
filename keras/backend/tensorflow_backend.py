@@ -3292,6 +3292,10 @@ def binary_crossentropy(target, output, from_logits=False):
                                                    logits=output)
 
 
+def nce_loss(kernel, bias, target, inputs, num_sampled, num_classes):
+    return tf.nn.nce_loss(kernel, bias, target, inputs, num_sampled, num_classes)
+
+
 def sigmoid(x):
     """Element-wise sigmoid.
 

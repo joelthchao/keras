@@ -1766,6 +1766,10 @@ def binary_crossentropy(target, output, from_logits=False):
     return T.nnet.binary_crossentropy(output, target)
 
 
+def nce_loss(kernel, bias, target, inputs, num_sampled, num_classes):
+    raise NotImplementedError
+
+
 def sigmoid(x):
     return T.nnet.sigmoid(x)
 
